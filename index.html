@@ -5,26 +5,61 @@
     <meta charset="utf-8">
     <title>sample</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
 
+    <script>
+        function toggleMobileMenu() {
+          document.getElementById("mobile-menu").classList.toggle("show");
+          var mobileMenuImage = document.getElementById("mobile-menu-image");
+            if (mobileMenuImage.src.includes("menu-open.png")) {
+                  mobileMenuImage.src = "images/menu-close.png";
+            } else {
+                  mobileMenuImage.src = "images/menu-open.png";
+            }     
+        }
+        window.onclick = function (event) {
+          if (!event.target.matches('.mobile-menu-image')) {
+            var mobileMenuContentItems = document.getElementsByClassName("mobile-menu-content");
+            for (var i = 0; i < mobileMenuContentItems.length; i++) {
+              var mobileMenuContentItem = mobileMenuContentItems[i];
+              if (mobileMenuContentItem.classList.contains("show")) {
+                mobileMenuContentItem.classList.remove("show");
+              }
+            }
+          }
+        };
+    </script>
+</head>
 <body>
-    <header>cameron
-        <nav class="flex-enabled"> <a href="index.html"> <img src="images/logo1.png" alt="LOGO" height="100"></a>
-           <div class="desktop-menu-container flex-enabled flex-right">
+    <header>
+        <nav class="flex-enabled"> 
+           <a href="index.html"> <img class="indent mobile-logo" src="images/logo1.png" alt="LOGO" height="100"></a>
+           <div class="desktop-menu-container flex-enabled">
             <ul class="link flex-enabled">
-                <li><a href="https://www.inprnt.com/profile/polarcc/">Shop</a></li>
                 <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="https://www.inprnt.com/profile/polarcc/">Shop</a></li>
                 <li><a href="https://www.behance.net/cameronpagano">Portfolio</a></li>
             </ul>
             </div>
+            <div class="mobile-menu-container flex-enabled flex-right">
+                <button onclick="toggleMobileMenu()" class="mobile-menu-button">
+                <img id="mobile-menu-image" class="mobile-menu-image" class="right-align" src="images/menu-open.png" alt"menu open"> 
+                 </button>
+                        <div id="mobile-menu" class="mobile-menu-content">
+                        <ul class="link">
+                            <li><a href="Gallery.html">Gallery</a></li>
+                            <li><a href="https://www.inprnt.com/profile/polarcc/">Shop</a></li>
+                            <li><a href="https://www.behance.net/cameronpagano">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
         </nav>
     </header>
+    <section class="flex-enabled flex-center">
+        <img src="images/11111.png" alt="WALLPAPER">
+        <h1 class="headline floating feature-text">DESIGNER</h1>
+    </section>
     <main>
-        <div class="mobile-menu-container flex-enabled flex-right">
-            <h2> <img src="images/bear.jpg" alt="BEAR" height="100"> </h2>
-        </div>
-
-
+       
         <p><strong>My names Cameron,</strong> and I am a graphic designer. <em>Since</em> I was 14 I have been</p>
 
         <p>I specialize in wall arts, branding, and etc. Below are my different social medias.</p>
@@ -41,8 +76,6 @@
         </ol>
 
         <p>&copy; cameronpagano</p>
-
-    
 
     </main>
     <footer></footer>
