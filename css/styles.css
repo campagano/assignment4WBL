@@ -1,0 +1,59 @@
+body {
+    color: rgb(20, 20, 20);
+    background: #e7e7e7;
+
+    font-family: "Helvetica";
+    font-size: 15px;
+}
+
+.red-span {
+    color: red;
+
+}
+
+.centered {
+    padding: 10px 10px 10px 10px;
+    border: 1px solid;
+    margin: 5px 5px;
+    width: 30%;
+
+    /* margin-left: 20px;
+    margin-right: 20px;
+
+    */
+}
+
+link {
+   align-items: center;
+}
+
+
+.diff-font {
+    font-family: cursive;
+}
+
+a:hover {
+    color: #ec08ff
+}
+
+.flex-enabled {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 1em;
+    margin-right: 1.4em;
+    white-space: nowrap;
+}
+
+nav {
+    margin-top: 31px;
+    margin-bottom: 31px;
+}
+.flex-right {
+    flex-direction: row;
+    flex:1;
+    justify-content: flex-end;
+    align-items: center;
+}
